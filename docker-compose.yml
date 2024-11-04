@@ -22,7 +22,7 @@ services:
     depends_on:
       - mysqldb
     build: ./
-    ## image: mohamedguesmi:latest
+    ## image: mohamedguesmi:latestdocker compose version
     restart: on-failure
     ports:
       - "8089:8089"
@@ -33,7 +33,7 @@ services:
     tty: true
     networks:
       mynetwork:
-        ipv4_address: 172.18.0.3  # Specify a different fixed IP address
+        ipv4_address: 10.0.0.5  # Specify a different fixed IP address
 
 volumes:
   db:
