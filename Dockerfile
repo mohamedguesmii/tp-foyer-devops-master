@@ -1,4 +1,8 @@
 FROM openjdk:17-jdk-alpine
 EXPOSE 8089
+
+# Copy the JAR file into the image and ensure the name matches in ENTRYPOINT
 ADD target/tp-foyer-5.0.0.jar /app/tp-foyer-5.0.0.jar
-ENTRYPOINT ["java","-jar","/app/tp-foyer.jar-5.0.0"]
+
+# Run the JAR file with the correct name
+ENTRYPOINT ["java","-jar","/app/tp-foyer-5.0.0.jar"]
