@@ -15,7 +15,7 @@ services:
   app-timesheet:
     depends_on:
       - mysqldb
-    image: mohamedabdelkebir/tp-foyer-image:5.0.0
+    image: mohamedguesmi/tp-foyer-image:5.0.0
     restart: on-failure
     ports:
       - 8089:8089
